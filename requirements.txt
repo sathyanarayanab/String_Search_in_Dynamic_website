@@ -1,0 +1,7 @@
+beautifulsoup4
+datetime
+lxml
+pytz
+requests
+selenium
+webdriver-manager
