@@ -35,8 +35,8 @@ def start():
             for element in soup.findAll(attrs={searchtype: NAME}):
                 log("Searching for the given string in results")
                 if STRING in element:
-                    log(element)
-                    log("Found")
+                    log(f"Found the string! \n{element}")
+                    #Add the Action here, I used web-hook
             log("Search completed")                              
             driver.close()
             log("Initializing script again in 5 mins")
@@ -50,7 +50,7 @@ def start():
 
 #STRING = """Multi
 #                 lined string"""
-STRING = "Enter your string here!" # Comment this line and user line 51, 52 for multi-lined string
+STRING = input("Enter your string here : ") # Comment this line and user line 51, 52 for multi-lined string
 URL = input("Enter the URL to be searched : ")
 MODE = input("String should be searched in Class or ID? 1 - Class, 2- ID : ")
 NAME = input("Enter the class or ID name : ")
